@@ -1,0 +1,8 @@
+#!/bin/sh
+# Xsetup - run as root before the login dialog appears
+modprobe nvidia_modeset
+modprobe nvidia_drm
+modprobe nvidia_uvm
+modprobe nvidia
+xrandr --setprovideroutputsource modesetting NVIDIA-0
+xrandr --auto
